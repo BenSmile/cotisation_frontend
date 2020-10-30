@@ -5,7 +5,7 @@ export default class Footer extends Component {
         return (
             <div>
                 <footer className="footer">
-<span className="text-muted"> Tous droits reserve</span>
+                    <span className="text-muted"> Tous droits reserve</span>
                 </footer>
             </div>
         )

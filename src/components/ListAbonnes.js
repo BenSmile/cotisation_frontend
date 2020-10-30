@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import AbonneService from '../services/AbonneService';
+import { Link } from "react-router-dom";
+
 
 export default class ListAbonnes extends Component {
     constructor(props) {
@@ -28,7 +30,10 @@ export default class ListAbonnes extends Component {
                 <h2 className="text-center">Abonnes</h2>
 
                 <div className="row">
-              
+                <Link to="/addAbonne" className="btn btn-primary mb-3">
+                    <i className="fa fa-plus-circle"> Create Abonne</i>
+                </Link>
+
                     <table className="table table-striped table-bordered">
                         <thead>
                             <td>Nom</td>
