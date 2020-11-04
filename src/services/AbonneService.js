@@ -16,6 +16,11 @@ class AbonneService {
         return axios.get(ABONNE_API_BASE_URL);
     }
 
+    getAbonneByPhone(telephone) {
+        return axios.get(`${ABONNE_API_BASE_URL}/${telephone}`);
+    }
+
+
     addAbonne(abonne){
 
        return axios.post(ABONNE_API_BASE_URL,
@@ -36,6 +41,28 @@ class AbonneService {
 
         // return axios.post(ABONNE_API_BASE_URL, abonne);
     }
+
+    updateAbonne(telephone, abonne){
+
+        return axios.put(`${ABONNE_API_BASE_URL}/${telephone}`,
+             querystring.stringify({
+                 nom: abonne.nom,
+                 postnom: abonne.postnom,
+                 age: abonne.age,
+                 sexe: abonne.sexe,
+                 telephone: abonne.telephone
+             }), {
+               headers: { 
+                 "Content-Type": "application/x-www-form-urlencoded"
+               }
+             })
+     }
+
+     deleteAbonne(telephone){
+
+        return axios.delete(`${ABONNE_API_BASE_URL}/${telephone}`);
+       
+     }
 }
 
 export default new AbonneService();
