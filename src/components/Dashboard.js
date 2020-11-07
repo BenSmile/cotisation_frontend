@@ -11,13 +11,11 @@ export default class Dashboard extends Component {
 
         this.state = {
             abonnesCount: 0,
-            operationDatas: {},
+            comptesCount: 0,
             operationCount: 0,
             dataChart:{}
-
         }
     }
-
 
 
     componentDidMount() {
@@ -35,13 +33,13 @@ export default class Dashboard extends Component {
         StatisticService.getOperationDatas().then((res) => {
             console.log("operations = ", res.data.data)
             let data = res.data.data;
-            this.setState({
-                operationDatas: {
-                    amount: data.map(op => op.total),
-                    days: data.map(op => op.dateOperation),
-                    count: data.map(op => op.count)
-                }
-            })
+            // this.setState({
+            //     operationDatas: {
+            //         amount: data.map(op => op.total),
+            //         days: data.map(op => op.dateOperation),
+            //         count: data.map(op => op.count)
+            //     }
+            // })
 
             this.setState({
                 dataChart : {

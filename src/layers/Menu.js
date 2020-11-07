@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import StatisticService from '../services/StatisticService';
 import { Link } from "react-router-dom";
 
 
@@ -14,28 +15,21 @@ export default class Menu extends Component {
   {/* Sidebar */}
   <div className="sidebar">
     {/* Sidebar user panel (optional) */}
-    <div className="user-panel mt-3 pb-3 mb-3 d-flex">
-      <div className="image">
-        {/* <img src="dist/img/user2-160x160.jpg" className="img-circle elevation-2" alt="User Image" /> */}
-      </div>
-      <div className="info">
-        <a href="#" className="d-block">Alexander Pierce</a>
-      </div>
-    </div>
+    
     {/* Sidebar Menu */}
     <nav className="mt-2">
 
       <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
      
 
-        <li className="nav-header">EXAMPLES</li>
+     
         
         <li className="nav-item">
           <Link to="/" className="nav-link">
           <i className="nav-icon fas fa-tachometer-alt" />
             <p>
               Dashboard
-              <span className="badge badge-info right">2</span>
+              {/* <span className="badge badge-info right">2</span> */}
             </p>
           </Link>
         </li>
@@ -45,7 +39,7 @@ export default class Menu extends Component {
             <i className="nav-icon fas fa-calendar-alt" />
             <p>
               Abonnes
-              <span className="badge badge-info right">2</span>
+              {/* <span className="badge badge-info right"></span> */}
             </p>
           </Link>
         </li>
